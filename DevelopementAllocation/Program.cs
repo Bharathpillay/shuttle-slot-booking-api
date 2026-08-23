@@ -23,7 +23,10 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")
+        policy.WithOrigins(
+                "http://localhost:4200",
+                "https://gentle-bay-05b3ef310.7.azurestaticapps.net"
+              )
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
